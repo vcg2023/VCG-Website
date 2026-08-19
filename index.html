@@ -324,7 +324,30 @@ img,svg{ max-width:100%; }
   padding-top:var(--sp-3); border-top:1px solid var(--line-dark);
   font-family:var(--f-mono); font-size:.72rem; color:var(--steel-light); letter-spacing:.03em;
 }
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
 
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.footer-social svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
 /* ---- Scroll reveal ---- */
 .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.is-visible{ opacity:1; transform:translateY(0); }
@@ -1962,7 +1985,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 </div>
 <div class="footer-bottom">
 <span>© 2026 Vinkesh Consulting Group. Vikri Srijan Private Limited.</span>
-<span class="footer-social"><a href="https://www.linkedin.com/company/vinkesh/" target="_blank" rel="noopener noreferrer" aria-label="Vinkesh Consulting Group on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="2" fill="currentColor"></rect><path d="M6.5 8.5H4V20h2.5V8.5ZM5.25 4C4.42 4 3.75 4.67 3.75 5.5S4.42 7 5.25 7s1.5-.67 1.5-1.5S6.08 4 5.25 4ZM10 8.5H7.6V20H10v-5.7c0-1.5.28-3 2.18-3 1.87 0 1.9 1.77 1.9 3.1V20h2.4v-6.2c0-3.04-.65-5.38-4.18-5.38-1.7 0-2.84.94-3.3 1.83H10V8.5Z" fill="var(--paper)"></path></svg></a></span>
+<span class="footer-social">
+  <a href="https://www.linkedin.com/company/vinkesh/" target="_blank" rel="noopener noreferrer" aria-label="Vinkesh Consulting Group on LinkedIn">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.29zM5.34 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.56 20.45h3.57V8.98H3.56v11.47z"/>
+    </svg>
+  </a>
+</span>
 </div>
 </div>
 </footer>
