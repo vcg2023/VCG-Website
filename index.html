@@ -475,7 +475,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-meta .h-xl{
   grid-area:headline;
   grid-column:1 / -1;
-  font-size:clamp(28px,2.4vw,36px);
+  font-size:clamp(28px,2vw,32px);
   line-height:1.05;
   letter-spacing:-.02em;
   white-space:nowrap;
@@ -523,24 +523,42 @@ grid-area:cta;
 @media (max-width:1080px){
   .hero-grid{
     grid-template-columns:1fr;
-    grid-template-areas:
-      "headline"
-      "content"
-      "image"
-      "stats";
+   grid-template-areas:
+  "label"
+  "headline"
+  "content"
+  "cta"
+  "image"
+  "stats";
   }
 
   .hero-meta{
     display:contents;
   }
 
-  .hero-meta > p:first-child,
-  .hero-meta .h-xl,
-  .hero-meta .lede,
-  .hero-meta .cta-row,
-  .hero-meta .hero-stats,
-  .hero-grid > .schematic{
-    grid-column:1;
+  .hero-meta > p:first-child{
+  grid-area:label;
+}
+
+.hero-meta .h-xl{
+  grid-area:headline;
+}
+
+.hero-meta .lede{
+  grid-area:content;
+}
+
+.hero-meta .cta-row{
+  grid-area:cta;
+}
+
+.hero-meta .hero-stats{
+  grid-area:stats;
+}
+
+.hero-grid > .schematic{
+  grid-area:image;
+}
   }
 
   .hero-meta .h-xl{
