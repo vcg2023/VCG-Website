@@ -449,7 +449,111 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero-stats{ display:flex; gap:var(--sp-4); flex-wrap:wrap; padding-top:var(--sp-3); border-top:1px solid var(--line); }
   .hero-stats div{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.05em; color:var(--steel); }
   .hero-stats strong{ display:block; font-family:var(--f-display); font-size:1.9rem; color:var(--ink); letter-spacing:0; text-transform:none; line-height:1; margin-bottom:.25rem; }
+/* ---- Hero visual refinement ---- */
+.hero-grid{
+  grid-template-columns:minmax(0,1fr) 300px;
+ grid-template-areas:
+  "label label"
+  "headline headline"
+  "content image"
+  "cta image"
+  "stats image";
+  column-gap:var(--sp-5);
+  row-gap:var(--sp-3);
+  align-items:start;
+}
 
+.hero-meta{
+  display:contents;
+}
+
+.hero-meta > p:first-child{
+  grid-area:label;
+  grid-column:1 / -1;
+}
+
+.hero-meta .h-xl{
+  grid-area:headline;
+  grid-column:1 / -1;
+  font-size:clamp(28px,2.4vw,36px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  margin:0;
+}
+
+.hero-meta .lede{
+  grid-area:content;
+  grid-column:1;
+  max-width:760px;
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+
+.hero-meta .cta-row{
+grid-area:cta;
+   grid-column:1;
+  align-self:end;
+  margin-top:var(--sp-3);
+}
+
+.hero-meta .hero-stats{
+  grid-area:stats;
+  grid-column:1;
+  margin-top:var(--sp-2);
+}
+
+.hero-grid > .schematic{
+  grid-area:image;
+  grid-column:2;
+  grid-row:3 / 6;
+  width:100%;
+  max-width:300px;
+  align-self:start;
+  justify-self:end;
+}
+
+.hero-grid .schematic-photo{
+  width:100%;
+  height:auto;
+}
+
+/* Mobile */
+@media (max-width:1080px){
+  .hero-grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "headline"
+      "content"
+      "image"
+      "stats";
+  }
+
+  .hero-meta{
+    display:contents;
+  }
+
+  .hero-meta > p:first-child,
+  .hero-meta .h-xl,
+  .hero-meta .lede,
+  .hero-meta .cta-row,
+  .hero-meta .hero-stats,
+  .hero-grid > .schematic{
+    grid-column:1;
+  }
+
+  .hero-meta .h-xl{
+    white-space:normal;
+  }
+
+  .hero-grid > .schematic{
+    grid-area:image;
+    grid-row:auto;
+    max-width:360px;
+    justify-self:start;
+  }
+}
   /* Problems section */
   .problem-row{
     display:grid; grid-template-columns:.55fr 1fr; gap:var(--sp-4);
