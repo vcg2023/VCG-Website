@@ -446,8 +446,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   /* Full-bleed photographic hero: the production-floor photograph fills the
      whole band, with a dark reading-scrim behind the text panel so the same
      eyebrow/headline/CTA content stays legible over the photo. */
-  .hero{ position:relative; padding:0; border-bottom:none; overflow:hidden; min-height:660px; display:flex; }
-  .hero .container{ display:flex; align-items:center; width:100%; padding-top:var(--sp-8); padding-bottom:var(--sp-8); }
+  .hero{ position:relative; padding:0; border-bottom:none; overflow:hidden; min-height:calc(100vh - 100px); display:flex; }
+  .hero .container{ display:flex; align-items:center; width:100%; padding-top:24px; padding-bottom:24px; }
   .hero-grid{ display:block; gap:0; padding-bottom:0; width:100%; }
   .hero-meta{ position:relative; z-index:2; display:flex; flex-direction:column; gap:var(--sp-4); max-width:660px; color:var(--paper); }
   .hero-meta .eyebrow{ color:var(--signal); }
@@ -462,7 +462,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero .schematic{
     position:absolute; top:0; right:0; bottom:0; left:0; z-index:0; aspect-ratio:auto; border:none; border-radius:0;
   }
-  .hero .schematic-photo{ object-position:center 65%; }
+  .hero .container{ display:flex; align-items:center; width:100%; padding-top:24px; padding-bottom:24px; }
   .hero .schematic .plate{ display:none; }
   /* Balanced reading-scrim: dark enough on the left for text contrast,
      but the photograph still reads clearly through the rest of the frame
