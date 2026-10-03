@@ -770,25 +770,90 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
 }
 
+
+
+/* VCG MOBILE HERO - FINAL VISIBILITY FIX */
 @media (max-width: 760px) {
+
+  .site-header {
+    position: relative !important;
+    z-index: 100 !important;
+  }
+
+  .hero {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 0 28px !important;
+    overflow: visible !important;
+    background-position: center center !important;
+  }
+
+  .hero .container {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 26px 20px 30px !important;
+    box-sizing: border-box !important;
+  }
+
   .hero-meta {
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 10px !important;
+    margin: 0 0 20px !important;
     transform: none !important;
-    margin-top: 20px !important;
   }
 
   .hero-meta .eyebrow {
     display: block !important;
     color: #ffffff !important;
-    font-weight: 700 !important;
-    font-size: 0.68rem !important;
-    letter-spacing: 0.08em !important;
+    font-size: 11px !important;
     line-height: 1.5 !important;
+    letter-spacing: 0.08em !important;
     white-space: normal !important;
-    margin-bottom: 0 !important;
-    opacity: 1 !important;
+    margin: 0 !important;
+  }
+
+  .hero h1 {
+    margin: 0 0 22px !important;
+    font-size: clamp(28px, 7.2vw, 36px) !important;
+    line-height: 1.16 !important;
+  }
+
+  .hero p {
+    font-size: 18px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 28px !important;
+  }
+
+  .hero .btn,
+  .hero a.btn {
+    width: 100% !important;
+    min-height: 64px !important;
+    box-sizing: border-box !important;
+    margin: 0 0 14px !important;
+    padding: 18px 22px !important;
+    white-space: normal !important;
+  }
+
+  .hero-stats,
+  .hero-metrics {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 22px 14px !important;
+    margin-top: 22px !important;
+    padding-top: 22px !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .hero-stats > *,
+  .hero-metrics > * {
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero * {
+    max-height: none;
   }
 }
 
