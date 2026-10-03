@@ -707,6 +707,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .page-view{ display:none; }
 .page-view.is-active{ display:block; }
+
+/* Homepage hero: keep the full content visible in the opening screen */
+@media (min-width: 761px) {
+  .hero {
+    min-height: calc(100vh - 80px) !important;
+    height: auto !important;
+  }
+
+  .hero .container {
+    min-height: inherit;
+    box-sizing: border-box;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .hero-meta {
+    transform: translateY(-10px);
+  }
+
+  .hero-meta .eyebrow {
+    display: flex !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
