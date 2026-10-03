@@ -733,37 +733,41 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   }
 }
 
-/* Hero eyebrow positioning and visibility */
+/* Hero eyebrow positioning and mobile visibility */
+
 .hero-meta {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 14px !important;
-  transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    transform: none !important;
 }
 
 .hero-meta .eyebrow {
-  display: block !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 0.82rem !important;
-  letter-spacing: 0.12em !important;
-  line-height: 1.5 !important;
-  margin-bottom: 0 !important;
-  opacity: 1 !important;
+    display: block !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.12em !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+    opacity: 1 !important;
+    white-space: normal !important;
 }
 
 @media (max-width: 760px) {
-  .hero-meta {
-    gap: 12px !important;
-  }
+    .hero-meta {
+        gap: 12px !important;
+        margin-top: 0 !important;
+        transform: none !important;
+    }
 
-  .hero-meta .eyebrow {
-    display: block !important;
-    font-size: 0.68rem !important;
-    letter-spacing: 0.08em !important;
-    line-height: 1.5 !important;
-    white-space: normal !important;
-  }
+    .hero-meta .eyebrow {
+        display: block !important;
+        font-size: 10px !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0.07em !important;
+        white-space: normal !important;
+    }
 }
 </style>
 
